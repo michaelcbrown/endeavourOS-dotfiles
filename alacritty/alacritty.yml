@@ -1,0 +1,11 @@
+window:
+  padding:
+    x: 10
+    y: 10
+  opacity: 0.80
+
+font:
+  normal:
+    family: Source Code Pro
+    style: Regular
+  size: 12.0
