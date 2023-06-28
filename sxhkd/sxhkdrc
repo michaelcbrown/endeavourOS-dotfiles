@@ -13,9 +13,6 @@ super + Escape
 super + p
     killall -q polybar ; polybar top -c ~/.config/polybar/config.ini
 
-super + shift + p
-    killall -q polybar ; polybar xtop -c ~/.config/polybar/config.ini
-
 alt + Return
     alacritty
 
@@ -37,7 +34,9 @@ alt + f
 alt + v
 	code
 
-#  ------ brightness  -------- # 
+#  ------ light/sound  -------- # 
+# for brillo, -q tells it to follow weber-fechner
+# for amixer, works out of box when I install endeavour, maybe not vanilla arch
 
 XF86MonBrightnessUp
     brillo -q -A 5
@@ -50,7 +49,6 @@ XF86AudioLowerVolume
 
 XF86AudioRaiseVolume
 	amixer set Master 5%+
-
 
 #  ------------ bspwm hotkeys ------------ # 
 
