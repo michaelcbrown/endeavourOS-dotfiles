@@ -1,8 +1,5 @@
-# ------------------------------------------------ #
-# ------------ wm independent hotkeys ------------ #
-# ------------------------------------------------ #
+# ------------ program hotkeys ------------ #
 
-# program launcher
 super + space
 	rofi -show combi -modes combi -combi-modes "window,drun,run"
 
@@ -34,7 +31,7 @@ alt + f
 alt + v
 	code
 
-#  ------ light/sound  -------- # 
+# ------------ function keys ------------ #
 # for brillo, -q tells it to follow weber-fechner
 # for amixer, works out of box when I install endeavour, maybe not vanilla arch
 
@@ -50,7 +47,7 @@ XF86AudioLowerVolume
 XF86AudioRaiseVolume
 	amixer set Master 5%+
 
-#  ------------ bspwm hotkeys ------------ # 
+# ------------ bspwm hotkeys ------------ #
 
 # quit/restart bspwm
 super + alt + {q,r}
