@@ -40,10 +40,10 @@ alt + v
 #  ------ brightness  -------- # 
 
 XF86MonBrightnessUp
-    xbacklight -inc 200000
+    brillo -q -A 5
 
 XF86MonBrightnessDown
-    xbacklight -dec 200000
+    brillo -q -U 5
 
 XF86AudioLowerVolume
 	amixer set Master 5%-
