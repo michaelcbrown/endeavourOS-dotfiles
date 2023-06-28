@@ -42,7 +42,8 @@ To that file
 [https://github.com/CameronNemo/brillo/blob/trunk/doc/man/brillo.1.md](https://github.com/CameronNemo/brillo/blob/trunk/doc/man/brillo.1.md)
 
 
-### xed[https://www.reddit.com/r/linuxmint/comments/oi9ou0/changing_xed_preferences_from_terminal/](https://www.reddit.com/r/linuxmint/comments/oi9ou0/changing_xed_preferences_from_terminal/)  
+### xed
+[https://www.reddit.com/r/linuxmint/comments/oi9ou0/changing_xed_preferences_from_terminal/](https://www.reddit.com/r/linuxmint/comments/oi9ou0/changing_xed_preferences_from_terminal/)  
   
 gsettings monitor org.x.editor.preferences.editor  
   
