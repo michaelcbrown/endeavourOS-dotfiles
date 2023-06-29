@@ -21,7 +21,8 @@ ln -sf $REPO/zshrc/.zshrc ~/.zshrc
 
 yay -Syu zuki-themes
 
-Use lxappearance to change theme to Zukitwo, mouse cursor to Adwaita
+Use lxappearance to change theme to Zukitwo, mouse cursor to Adwaita, default font to cantarell regular 14
+or, the config file appears to be in ~/.config/gtk-3.0/settings.ini
 
 ### brightness
 yay -Syu brillo
