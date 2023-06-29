@@ -13,7 +13,7 @@ ln -sf ~/Documents/repos/endeavourOS-dotfiles/picom ~/.config
 ln -sf ~/Documents/repos/endeavourOS-dotfiles/rofi ~/.config
 ln -sf ~/Documents/repos/endeavourOS-dotfiles/alacritty ~/.config
 
-ln -sf ~/Documents/repos/endeavourOS-dotfiles/fonts ~/.local/share/fonts
+ln -s ~/Documents/repos/endeavourOS-dotfiles/fonts ~/.local/share/fonts
 fc-cache -fv
 
 wget --no-check-certificate http://install.ohmyz.sh -O - | sh
