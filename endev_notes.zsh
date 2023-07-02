@@ -1,4 +1,4 @@
-sudo pacman -Syu code zsh mcfly zoxide alacritty gnome-keyring ranger picom obsidian
+sudo pacman -Syu code zsh mcfly zoxide alacritty gnome-keyring ranger picom obsidian dropbox
 
 chsh -s /usr/bin/zsh
 
@@ -6,6 +6,7 @@ mkdir Documents/repos
 cd Documents/repos
 git clone https://github.com/michaelcbrown/endeavourOS-dotfiles
 
+# Turns out I do need to delete the existing config folders before doing this
 ln -sf ~/Documents/repos/endeavourOS-dotfiles/bspwm ~/.config
 ln -sf ~/Documents/repos/endeavourOS-dotfiles/sxhkd ~/.config
 ln -sf ~/Documents/repos/endeavourOS-dotfiles/polybar ~/.config
@@ -21,26 +22,21 @@ ln -sf $REPO/zshrc/.zshrc ~/.zshrc
 
 yay -Syu zuki-themes
 
-Use lxappearance to change theme to Zukitwo, mouse cursor to Adwaita, default font to cantarell regular 14
-or, the config file appears to be in ~/.config/gtk-3.0/settings.ini
+# Use lxappearance: theme > Zuiktwo, system font > Cantarell 14, mouse > Adwaita
+# Or, the config file appears to be in ~/.config/gtk-3.0/settings.ini
 
-### brightness
 yay -Syu brillo
-
-sudo gpasswd -a mb video  
-  
+sudo gpasswd -a mb video
 sudo touch /etc/udev/rules.d/backlight.rules
+sudo xed /etc/udev/rules.d/backlight.rules
 
-Add:
+#Add this:
 ACTION=="add", SUBSYSTEM=="backlight", RUN+="/bin/chgrp video $sys$devpath/brightness", RUN+="/bin/chmod g+w $sys$devpath/brightness"
-To that file
 
-### xed
-[https://www.reddit.com/r/linuxmint/comments/oi9ou0/changing_xed_preferences_from_terminal/](https://www.reddit.com/r/linuxmint/comments/oi9ou0/changing_xed_preferences_from_terminal/)  
-  
-gsettings monitor org.x.editor.preferences.editor  
-  
-Then change a setting within xed to see that setting's name, which led to:
-
+# Can adjust xed settings with this:
 gsettings set org.x.editor.preferences.editor use-default-font false
 gsettings set org.x.editor.preferences.editor editor-font 'Source Code Pro 16'
+
+# Also, can figure out similar settings using this:
+gsettings monitor org.x.editor.preferences.editor  
+# Then change a setting within xed to see that setting's name
