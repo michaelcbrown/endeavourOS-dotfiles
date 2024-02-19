@@ -1,4 +1,4 @@
-sudo pacman -Syu code zsh mcfly zoxide alacritty gnome-keyring ranger picom obsidian dropbox
+sudo pacman -Syu code zsh mcfly zoxide alacritty gnome-keyring ranger picom obsidian dropbox seahorse exa gparted
 
 chsh -s /usr/bin/zsh
 
@@ -40,3 +40,7 @@ gsettings set org.x.editor.preferences.editor editor-font 'Source Code Pro 16'
 # Also, can figure out similar settings using this:
 gsettings monitor org.x.editor.preferences.editor  
 # Then change a setting within xed to see that setting's name
+
+# Desktop background: run Nitrogen, click preferences
+# Greeter background: put image in /usr/share/endeavouros/backgrounds
+# Then, edit /etc/lightdm/slick-greeter.conf to point to that file
