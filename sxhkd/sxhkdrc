@@ -31,6 +31,12 @@ alt + f
 alt + v
 	code
 
+alt + 9
+    setxkbmap us
+
+alt + 0
+    setxkbmap canary
+
 # ------------ function keys ------------ #
 # for brillo, -q tells it to follow weber-fechner
 # for amixer, works out of box when I install endeavour, maybe not vanilla arch
