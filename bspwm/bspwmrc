@@ -1,6 +1,9 @@
 #! /bin/sh
 
-pgrep -x sxhkd > /dev/null || sxhkd &
+## Bspwm config directory
+DIR="$HOME/.config/bspwm"
+## Export bspwm/bin dir to PATH
+export PATH="${PATH}:$DIR/scripts"
 
 bspc monitor eDP -d 1 2 3 4
 bspc monitor DisplayPort-0 -d 5
@@ -20,16 +23,13 @@ bspc rule -a Matplotlib state=floating
 
 # Autostart
 
-~/.config/polybar/launch.sh &
+pgrep -x sxhkd > /dev/null || sxhkd &
 
-picom &
-
-~/.config/bspwm/scripts/cleanfullscreen.sh &
+sxhkd -c "$DIR"/sxhkdrc &
+"$DIR"/polybar/polybar.sh &
+bspcomp &
+cleanfullscreen &
 
 /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
 
 nitrogen --restore &
-
-#dex -a -s /etc/xdg/autostart/:~/.config/autostart/
-
-setxkbmap -option grp:alt_shift_toggle us,colemak_dh &

@@ -6,7 +6,7 @@ family = "Source Code Pro"
 style = "Regular"
 
 [window]
-opacity = 0.8
+opacity = 0.5
 
 [window.padding]
 x = 10
