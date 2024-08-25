@@ -5,11 +5,8 @@
 super + space
 	rofi -show combi -modes combi -combi-modes "window,drun,run"
 
-alt + {Return,r,n,t,x,f}
-    {alacritty,alacritty -e ranger,thunar,obsidian,xed,firefox}
-
-alt + v
-    code --password-store="gnome-libsecret"
+alt + {Return,r,n,t,x,f,v}
+    {alacritty,alacritty -e ranger,thunar,obsidian,xed,firefox,code}
 
 ## ------------------------------------------##
 ## ------------- function keys ------------- ##
