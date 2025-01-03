@@ -3,7 +3,7 @@
 ## ------------------------------------------##
 
 super + space
-	rofi -show combi -modes combi -combi-modes "window,drun,run"
+	rofi -show drun
 
 alt + {Return,r,n,t,x,f,v}
     {alacritty,alacritty -e ranger,thunar,obsidian,xed,firefox,code}
